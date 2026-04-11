@@ -9,6 +9,7 @@ namespace CyberSecurityBot
 {
     class Program
     {
+        //Cybersecurity awareness bot - main entry
         static void Main()
         {
             Console.Title = "Cybersecurity Awareness Bot";
