@@ -2,7 +2,7 @@ name: .NET Build
 
 on:
   push:
-    branches: [ "master", "main" ]
+    branches: [ "master" ]
 
 jobs:
   build:
@@ -10,6 +10,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+      with:
+        ref: master
 
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
@@ -17,7 +19,7 @@ jobs:
         dotnet-version: '6.0.x'
 
     - name: Restore
-      run: dotnet restore CyberSecurityBot/CyberSecurityBot.sln
+      run: dotnet restore CyberSecurityBot.sln
 
     - name: Build
-      run: dotnet build CyberSecurityBot/CyberSecurityBot.sln --no-restore
+      run: dotnet build CyberSecurityBot.sln --no-restore
