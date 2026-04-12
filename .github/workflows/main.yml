@@ -17,7 +17,7 @@ jobs:
         dotnet-version: '6.0.x'
 
     - name: Restore
-      run: dotnet restore
+      run: dotnet restore CyberSecurityBot/CyberSecurityBot.sln
 
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build CyberSecurityBot/CyberSecurityBot.sln --no-restore
