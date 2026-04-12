@@ -38,6 +38,7 @@ namespace CyberSecurityBot
             }
         }
 
+       //Greets user and collects their name
         private void AskName()
         {
             Console.Write("What's your name? ");
