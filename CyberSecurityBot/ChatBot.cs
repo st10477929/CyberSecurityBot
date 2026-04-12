@@ -21,7 +21,7 @@ namespace CyberSecurityBot
                 Console.ResetColor();
 
                 string userInput = Console.ReadLine()?.ToLower().Trim();
-
+                //Validates user input before processing
                 if (string.IsNullOrWhiteSpace(userInput))
                 {
                     Respond("That seemed empty — could you try again?");
