@@ -14,6 +14,7 @@ namespace CyberSecurityBot
 
     namespace CyberSecurityBot
     {
+        // Handles all audio playback functionality 
         public static class AudioPlayer
         {
             public static void PlayGreeting()
