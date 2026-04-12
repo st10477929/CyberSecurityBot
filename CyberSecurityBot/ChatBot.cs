@@ -49,7 +49,7 @@ namespace CyberSecurityBot
 
             Respond($"Welcome aboard, {userName}! I'm your cybersecurity awareness assistant.");
         }
-
+        // Handles cybersecruity topic responses 
         private void HandleResponse(string userInput)
         {
             if (userInput.Contains("how are you") || userInput.Contains("doing"))
