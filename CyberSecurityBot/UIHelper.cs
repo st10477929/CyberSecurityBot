@@ -11,6 +11,7 @@ namespace CyberSecurityBot
     internal class UIHelper
     
     {
+        // Display ASCII art banner and styled header
         public static void DisplayHeader()
         
         {
