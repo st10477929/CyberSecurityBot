@@ -1,47 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Media;
 using System.IO;
 
 namespace CyberSecurityBot
 {
-    using System;
-    using System.Media;
-    using System.IO;
-
-    namespace CyberSecurityBot
+    public static class AudioPlayer
     {
-        // Handles all audio playback functionality 
-        public static class AudioPlayer
+        public static void PlayGreeting()
         {
-            public static void PlayGreeting()
+            try
             {
-                try
-                {
-                    string audioPath = Path.Combine(
-                        AppDomain.CurrentDomain.BaseDirectory,
-                        "Assets",
-                        "greeting.wav"
-                    );
+                string audioPath = Path.Combine(
+                    AppDomain.CurrentDomain.BaseDirectory,
+                    "Assets",
+                    "greeting.wav"
+                );
 
-                    if (File.Exists(audioPath))
-                    {
-                        SoundPlayer soundPlayer = new SoundPlayer(audioPath);
-                        soundPlayer.PlaySync();
-                    }
-                    else
-                    {
-                        Console.Beep(600, 400);
-                        Console.Beep(800, 400);
-                    }
-                }
-                catch (Exception ex) 
+                if (File.Exists(audioPath))
                 {
-                    Console.WriteLine("[!] Voice playback error: " + ex.Message);
+                    SoundPlayer soundPlayer = new SoundPlayer(audioPath);
+                    soundPlayer.PlaySync();
                 }
+                else
+                {
+                    Console.Beep(600, 400);
+                    Console.Beep(800, 400);
+                }
+            }
+            catch
+            {
+                Console.WriteLine("[!] Voice playback unavailable.");
             }
         }
     }
