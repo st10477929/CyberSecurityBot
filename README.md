@@ -17,7 +17,6 @@ ASCII art, and interactive menus.
 - Typing effect and coloured UI
 
 ## CI Workflow
-![CI Status](https://github.com/st10477929/CyberSecurityBot/actions/workflows/dotnet.yml/badge.svg)
-
+![CI Status](https://github.com/st10477929/CyberSecurityBot/actions/workflows/dotnet.yml/badge.svg?branch=master)
 ## Screenshot of CI Green Checkmark
 ![Green Checkmark](your-screenshot-here)
