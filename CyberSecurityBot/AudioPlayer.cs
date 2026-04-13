@@ -8,16 +8,10 @@ using System.IO;
 
 namespace CyberSecurityBot
 {
-    using System;
-    using System.Media;
-    using System.IO;
-
-    namespace CyberSecurityBot
-    {
         // Handles all audio playback functionality 
-        public static class AudioPlayer
+        public class AudioPlayer
         {
-            public static void PlayGreeting()
+            public void PlayGreeting()
             {
                 try
                 {
