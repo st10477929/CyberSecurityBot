@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
@@ -19,7 +19,7 @@ jobs:
         dotnet-version: 8.0.x
 
     - name: Restore dependencies
-      run: dotnet restore CyberSecurityBot/CyberSecurityBot.csproj
+      run: dotnet restore "CyberSecurityBot/CyberSecurityBot.csproj"
 
     - name: Build
-      run: dotnet build CyberSecurityBot/CyberSecurityBot.csproj --no-restore --configuration Release
+      run: dotnet build "CyberSecurityBot/CyberSecurityBot.csproj" --no-restore
