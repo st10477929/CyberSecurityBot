@@ -42,7 +42,7 @@ An expanded version of CyberBot with a full Graphical User Interface.
 ### How to Run
 
 1. Open `CyberSecurityBot.sln` in Visual Studio
-1. Set **PART 2** as startup project
+1. Set **Part 2** as startup project
 1. Press `F5` to run
 
 -----
