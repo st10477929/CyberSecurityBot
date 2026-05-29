@@ -2,22 +2,24 @@ name: .NET Build
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   build:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v3
 
     - name: Setup .NET
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '6.0.x'
+        dotnet-version: 8.0.x
 
-    - name: Restore
+    - name: Restore dependencies
       run: dotnet restore CyberSecurityBot.sln
 
     - name: Build
-      run: dotnet build CyberSecurityBot.sln --no-restore
+      run: dotnet build CyberSecurityBot.sln --no-restore --configuration Release
