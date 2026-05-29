@@ -1,9 +1,11 @@
-﻿using CyberSecurityBot.CyberSecurityBot;
+﻿using CyberSecurityBot;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace CyberSecurityBot
 {
@@ -15,7 +17,7 @@ namespace CyberSecurityBot
             Console.Title = "Cybersecurity Awareness Bot";
 
             // Trigger audio welcome
-            AudioPlayer.PlayGreeting();
+            CyberSecurityBot.AudioPlayer.PlayGreeting();
 
             // Render visual header
             UIHelper.DisplayHeader();
@@ -25,6 +27,16 @@ namespace CyberSecurityBot
             bot.StartChat();
 
             Console.ReadLine();
+          
+
+            //Part 2 WPF window
+            Thread wpfThread = new Thread(() =>
+            {
+                var app = new Application();
+                app.Run(new Part2.MainWindow());
+            });
+            wpfThread.SetApartmentState(ApartmentState.STA);
+            wpfThread.Start();
         }
     }
 }

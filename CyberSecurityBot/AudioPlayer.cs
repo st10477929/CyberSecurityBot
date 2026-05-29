@@ -38,11 +38,13 @@ namespace CyberSecurityBot
                         Console.Beep(800, 400);
                     }
                 }
-                catch (Exception ex) 
+                catch
                 {
-                    Console.WriteLine("[!] Voice playback error: " + ex.Message);
+                    Console.WriteLine("[!] Voice playback unavailable.");
                 }
             }
         }
     }
 }
+        
+   
