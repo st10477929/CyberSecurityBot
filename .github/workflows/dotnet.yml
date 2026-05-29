@@ -19,7 +19,7 @@ jobs:
         dotnet-version: 8.0.x
 
     - name: Restore dependencies
-      run: dotnet restore CyberSecurityBot.sln
+      run: dotnet restore CyberSecurityBot/CyberSecurityBot.csproj
 
     - name: Build
-      run: dotnet build CyberSecurityBot.sln --no-restore --configuration Release
+      run: dotnet build CyberSecurityBot/CyberSecurityBot.csproj --no-restore --configuration Release
