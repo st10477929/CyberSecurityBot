@@ -56,7 +56,7 @@ An expanded version of CyberBot with a full Graphical User Interface.
 
 ## CI Workflow
 
-![.NET Build](https://github.com/st10477929/CyberSecurityBot/actions/workflows/dotnet.yml/badge.svg)
+[View CI Workflow](https://github.com/st10477929/CyberSecurityBot/actions)
 
 -----
 
